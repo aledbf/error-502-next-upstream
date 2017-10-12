@@ -1,0 +1,13 @@
+  apiVersion: extensions/v1beta1
+  kind: Ingress
+  metadata:
+    name: backend-502
+  spec:
+    rules:
+    - host: backend-502.uswest2-01.rocket-science.io
+      http:
+        paths:
+        - backend:
+            serviceName: backend-502
+            servicePort: 80
+          path: /
