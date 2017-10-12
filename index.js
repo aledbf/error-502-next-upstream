@@ -5,7 +5,7 @@ app.get('/healthz', function (req, res) {
   res.status(200).send('OK');
 });
 
-app.get('/', function (req, res) {
+app.all('/', function (req, res) {
   res.status(502).json({ error: '502 from backend' });
 });
 
